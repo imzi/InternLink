@@ -3,7 +3,6 @@ package com.internlink.service;
 import com.internlink.model.EndUser;
 import com.internlink.repository.EndUserRepository;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
