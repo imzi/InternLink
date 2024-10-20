@@ -8,7 +8,7 @@ public class InternLinkApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(InternLinkApplication.class, args);
-		System.out.println("Hello World");
+		System.out.println("***---InternLink Application is working---***");
 	}
 
 }
