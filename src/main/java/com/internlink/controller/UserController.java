@@ -1,12 +1,10 @@
 package com.internlink.controller;
 
+import com.internlink.dto.LoginDto;
 import com.internlink.model.User;
 import com.internlink.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -20,7 +18,8 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String login(@RequestBody LoginDto user) {
+        userService.login(user);
         return "login"; // Return the login view
     }
 }

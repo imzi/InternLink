@@ -25,11 +25,11 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Disable CSRF protection using the new style
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers("/register", "/logine").permitAll()
+                        .requestMatchers("/register", "/login").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        .loginPage("/logine").permitAll()
+                        .loginPage("/login").permitAll()
                 )
                 .logout(LogoutConfigurer::permitAll);
 
