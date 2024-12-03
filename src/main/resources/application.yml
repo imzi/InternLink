@@ -1,6 +1,9 @@
 spring:
   application:
     name: InternLink
+  jpa:
+    hibernate:
+      ddl-auto: update
 
   datasource:
     url: jdbc:mysql://localhost:3306/internlink
